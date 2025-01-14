@@ -11,11 +11,7 @@ const app = express();
 const PORT = process.env.PORT||5001;
 
 // Middleware
-app.use(cors({
-  origin: 'https://chainsense-frontend.vercel.app', // Remove trailing slash
-  methods: ['GET', 'POST', 'OPTIONS'], // Specify allowed methods
-  allowedHeaders: ['Content-Type'], // Specify allowed headers
-}));
+app.use(cors({origin: 'https://chainsense-frontend.vercel.app'}));
 app.use(express.json()); // Parse incoming JSON requests
 
 // Route to handle chat messages
